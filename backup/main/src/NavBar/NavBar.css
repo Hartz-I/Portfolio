@@ -62,33 +62,3 @@
 }
 
 /* small screen */
-@media only screen and (max-width: 600px) {
-  .NavBar {
-    bottom: 0;
-    width: 100vw;
-    height: 5rem;
-  }
-  .logo {
-    display: none;
-  }
-
-  .navbar-nav {
-    flex-direction: row;
-  }
-
-  .nav-link {
-    justify-content: center;
-  }
-
-  main {
-    margin: 0;
-  }
-
-  .NavBar:hover {
-    width: 100%;
-  }
-
-  .NavBar:hover .link-text {
-    display: none;
-  }
-}
