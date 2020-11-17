@@ -25,14 +25,27 @@ class App extends Component {
           "https://i.pinimg.com/736x/33/32/6d/33326dcddbf15c56d631e374b62338dc.jpg",
         para: "Aww! isn't that cute!",
       },
-      {
-        title: "I want to test out how it looks with more cards",
-        para: "So! How's life?",
-      },
     ],
+    wideView: false,
+  };
+
+  onClickHandler = () => {
+    this.setState({
+      wideView: true,
+    });
   };
 
   render() {
+    let wideViewTab = null;
+
+    if (this.wideView) {
+      wideViewTab = (
+        <div>
+          <h1>Hi! Is this working?</h1>
+        </div>
+      );
+    }
+
     return (
       <div className="App">
         <Header />
@@ -45,9 +58,11 @@ class App extends Component {
                 para={card.para}
                 key={index}
                 imgSrc={card.imgSrc}
+                clicked={this.onClickHandler}
               />
             );
           })}
+          {wideViewTab}
         </article>
       </div>
     );
