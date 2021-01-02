@@ -7,3 +7,13 @@
     transform: translateX(0);
   }
 }
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(50rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

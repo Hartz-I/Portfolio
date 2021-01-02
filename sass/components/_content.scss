@@ -12,6 +12,8 @@
       url(../img/bg.jpg);
     background-size: cover;
     background-blend-mode: screen;
+
+    animation: moveInRight 1s ease;
   }
 
   &__profile {
@@ -38,6 +40,8 @@
 
   &__article {
     position: relative;
+
+    animation: moveInRight 2s ease;
     &--title {
       position: absolute;
       top: 10rem;

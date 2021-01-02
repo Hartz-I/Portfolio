@@ -12,6 +12,12 @@ body {
   100% {
     transform: translateX(0); } }
 
+@keyframes moveInRight {
+  0% {
+    transform: translateX(50rem); }
+  100% {
+    transform: translateX(0); } }
+
 .heading-primary {
   color: rgba(88, 0, 0, 0.7);
   font-family: "Helvetica Neue", sans-serif;
@@ -161,7 +167,8 @@ body {
     height: 17rem;
     background-image: linear-gradient(to right bottom, rgba(88, 0, 0, 0.6), rgba(194, 59, 34, 0.6)), url(../img/bg.jpg);
     background-size: cover;
-    background-blend-mode: screen; }
+    background-blend-mode: screen;
+    animation: moveInRight 1s ease; }
   .content__profile {
     background-image: url(../img/mypic.jpg);
     background-size: cover;
@@ -175,7 +182,8 @@ body {
     .content__profile:hover {
       background-image: linear-gradient(to right bottom, rgba(88, 0, 0, 0.4), rgba(194, 59, 34, 0.4)), url(../img/mypic.jpg); }
   .content__article {
-    position: relative; }
+    position: relative;
+    animation: moveInRight 2s ease; }
     .content__article--title {
       position: absolute;
       top: 10rem; }
