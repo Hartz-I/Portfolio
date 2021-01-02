@@ -1,0 +1,13 @@
+.flash-card {
+  height: 80vh;
+  background-image: linear-gradient(
+    to top,
+    $color-primary-dark,
+    $color-primary-light
+  );
+  border-radius: 5px;
+  overflow: hidden;
+  &__img {
+    width: 100%;
+  }
+}

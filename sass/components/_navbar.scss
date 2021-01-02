@@ -1,0 +1,87 @@
+.navbar {
+  position: relative;
+
+  animation: moveInLeft 1s ease;
+
+  &__logo-box {
+    position: absolute;
+    left: 0.5rem;
+    top: -1rem;
+  }
+
+  &__logo {
+    height: 3rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    text-align: left;
+    color: wheat;
+
+    position: absolute;
+    left: 4rem;
+    top: -0.3rem;
+  }
+
+  &__vertical-line {
+    background-color: $color-primary-light;
+    width: 2px;
+    height: 2.5rem;
+
+    position: absolute;
+    left: 10rem;
+    top: -0.7rem;
+  }
+
+  &__button {
+    color: white;
+    text-decoration: none;
+    padding: 0.4rem;
+    background-color: $color-primary;
+    border-radius: 0.2rem;
+    font-size: 1.2rem;
+
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $color-primary-light;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(-1px);
+    }
+
+    &--primary {
+      position: absolute;
+      top: -0.5rem;
+      left: 70%;
+    }
+
+    &--secondary {
+      position: absolute;
+      top: -0.5rem;
+      left: 80%;
+    }
+
+    @media (min-width: 400px) {
+      &--primary {
+        left: 60%;
+      }
+
+      &--secondary {
+        left: 80%;
+      }
+    }
+
+    @media (min-width: 900px) {
+      &--primary {
+        left: 80%;
+      }
+
+      &--secondary {
+        left: 90%;
+      }
+    }
+  }
+}
