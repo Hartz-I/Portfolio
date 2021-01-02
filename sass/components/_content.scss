@@ -1,0 +1,50 @@
+.content {
+  position: relative;
+  &__cover {
+    width: 100%;
+    height: 17rem;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-dark, 0.6),
+        rgba($color-primary-light, 0.6)
+      ),
+      url(../img/bg.jpg);
+    background-size: cover;
+    background-blend-mode: screen;
+  }
+
+  &__profile {
+    background-image: url(../img/mypic.jpg);
+    background-size: cover;
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    top: 10rem;
+    left: 10%;
+    border-radius: 10rem;
+
+    border: 1rem solid rgba(0, 0, 0, 0.7);
+
+    &:hover {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary-dark, 0.4),
+          rgba($color-primary-light, 0.4)
+        ),
+        url(../img/mypic.jpg);
+    }
+  }
+
+  &__article {
+    position: relative;
+    &--title {
+      position: absolute;
+      top: 10rem;
+    }
+
+    &--description {
+      position: absolute;
+      top: 15rem;
+    }
+  }
+}

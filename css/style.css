@@ -12,11 +12,32 @@ body {
   100% {
     transform: translateX(0); } }
 
+.heading-primary {
+  color: rgba(88, 0, 0, 0.7);
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 1rem; }
+
 .heading-secondary {
   color: white;
-  text-align: left;
-  padding: 1rem;
-  font-size: 2rem; }
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  padding: 1rem; }
+
+.description {
+  color: rgba(88, 0, 0, 0.7);
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1rem; }
+  .description:not(:last-child) {
+    margin-bottom: 1rem; }
 
 .navbar {
   position: relative;
@@ -77,9 +98,89 @@ body {
   height: 80vh;
   background-image: linear-gradient(to top, #580000, #c23b22);
   border-radius: 5px;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(138, 0, 0, 0.5);
+  position: relative; }
   .flash-card__img {
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
     width: 100%; }
+  .flash-card__header--primary {
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    background-color: #8a0000;
+    position: absolute;
+    top: 10%;
+    animation: moveInLeft 1s; }
+  .flash-card__header--secondary {
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    background-color: #8a0000;
+    position: absolute;
+    top: 17%;
+    animation: moveInLeft 1.2s; }
+  .flash-card__desc {
+    margin: -1rem 2rem 2rem 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: rgba(0, 0, 0, 0.8);
+    background-color: #fff; }
+
+.btn {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  display: inline-block;
+  transition: all 0.2s; }
+  .btn:hover {
+    transform: translateY(-2px); }
+  .btn:active {
+    transform: translateY(-1px); }
+  .btn--fb {
+    animation: moveInLeft 1.6s;
+    background-color: #4267b2; }
+    .btn--fb:hover {
+      background-color: #6283c5; }
+  .btn--gh {
+    animation: moveInLeft 1.8s;
+    background-color: #1d2129; }
+    .btn--gh:hover {
+      background-color: #323947; }
+  .btn--tw {
+    animation: moveInLeft 2s;
+    background-color: #1da1f2; }
+    .btn--tw:hover {
+      background-color: #4db5f5; }
+
+.content {
+  position: relative; }
+  .content__cover {
+    width: 100%;
+    height: 17rem;
+    background-image: linear-gradient(to right bottom, rgba(88, 0, 0, 0.6), rgba(194, 59, 34, 0.6)), url(../img/bg.jpg);
+    background-size: cover;
+    background-blend-mode: screen; }
+  .content__profile {
+    background-image: url(../img/mypic.jpg);
+    background-size: cover;
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    top: 10rem;
+    left: 10%;
+    border-radius: 10rem;
+    border: 1rem solid rgba(0, 0, 0, 0.7); }
+    .content__profile:hover {
+      background-image: linear-gradient(to right bottom, rgba(88, 0, 0, 0.4), rgba(194, 59, 34, 0.4)), url(../img/mypic.jpg); }
+  .content__article {
+    position: relative; }
+    .content__article--title {
+      position: absolute;
+      top: 10rem; }
+    .content__article--description {
+      position: absolute;
+      top: 15rem; }
 
 .row {
   max-width: 90%;

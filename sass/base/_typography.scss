@@ -1,6 +1,31 @@
+.heading-primary {
+  color: rgba($color-primary-dark, 0.7);
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 1rem;
+}
+
 .heading-secondary {
   color: white;
-  text-align: left;
-  padding: 1rem;
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  padding: 1rem;
+}
+
+.description {
+  color: rgba($color-primary-dark, 0.7);
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 }

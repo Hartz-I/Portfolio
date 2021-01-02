@@ -7,7 +7,43 @@
   );
   border-radius: 5px;
   overflow: hidden;
+
+  box-shadow: 0 1rem 2rem rgba($color-primary, 0.5);
+
+  position: relative;
+
   &__img {
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
     width: 100%;
+  }
+
+  &__header {
+    &--primary {
+      padding: 0.3rem;
+      border-radius: 0.3rem;
+      background-color: $color-primary;
+      position: absolute;
+      top: 10%;
+
+      animation: moveInLeft 1s;
+    }
+
+    &--secondary {
+      padding: 0.3rem;
+      border-radius: 0.3rem;
+      background-color: $color-primary;
+      position: absolute;
+      top: 17%;
+
+      animation: moveInLeft 1.2s;
+    }
+  }
+
+  &__desc {
+    margin: -1rem 2rem 2rem 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: rgba($color-flash-desc, 0.8);
+    background-color: $bg-color-flash-desc;
   }
 }
