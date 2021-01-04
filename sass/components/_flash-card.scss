@@ -1,5 +1,5 @@
 .flash-card {
-  height: 80vh;
+  height: 35rem;
   background-image: linear-gradient(
     to top,
     $color-primary-dark,
@@ -8,13 +8,17 @@
   border-radius: 5px;
   overflow: hidden;
 
-  box-shadow: 0 1rem 2rem rgba($color-primary, 0.5);
+  box-shadow: 0 0.2rem 2rem rgba($color-primary, 0.5);
 
   position: relative;
 
+  animation: subtleMove 10s;
+  animation-iteration-count: infinite;
+
   &__img {
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
-    width: 100%;
+    max-width: 100%;
+    max-height: 20rem;
   }
 
   &__header {
@@ -23,7 +27,7 @@
       border-radius: 0.3rem;
       background-color: $color-primary;
       position: absolute;
-      top: 10%;
+      top: 4rem;
 
       animation: moveInLeft 1s;
     }
@@ -33,7 +37,7 @@
       border-radius: 0.3rem;
       background-color: $color-primary;
       position: absolute;
-      top: 17%;
+      top: 6.2rem;
 
       animation: moveInLeft 1.2s;
     }

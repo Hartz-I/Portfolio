@@ -4,7 +4,7 @@
 
 body {
   font-size: 10px;
-  background-color: rgba(194, 59, 34, 0.05); }
+  background-color: rgba(194, 59, 34, 0.01); }
 
 @keyframes moveInLeft {
   0% {
@@ -17,6 +17,14 @@ body {
     transform: translateX(50rem); }
   100% {
     transform: translateX(0); } }
+
+@keyframes subtleMove {
+  0% {
+    transform: scale(1) translateY(0); }
+  50% {
+    transform: scale(1.05) translateY(-0.05rem); }
+  100% {
+    transform: scale(1) translateY(0); } }
 
 .heading-primary {
   color: rgba(88, 0, 0, 0.7);
@@ -39,12 +47,23 @@ body {
 .description {
   color: rgba(88, 0, 0, 0.7);
   font-family: "Raleway", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
-  line-height: 1rem;
+  line-height: 0.9rem;
+  padding: 0.5rem; }
+
+.content-description {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
   padding: 1rem; }
-  .description:not(:last-child) {
+  .content-description:not(:last-child) {
     margin-bottom: 1rem; }
+
+.u-color-black {
+  color: black; }
 
 .navbar {
   position: relative;
@@ -102,28 +121,31 @@ body {
         left: 90%; } }
 
 .flash-card {
-  height: 80vh;
+  height: 35rem;
   background-image: linear-gradient(to top, #580000, #c23b22);
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 1rem 2rem rgba(138, 0, 0, 0.5);
-  position: relative; }
+  box-shadow: 0 0.2rem 2rem rgba(138, 0, 0, 0.5);
+  position: relative;
+  animation: subtleMove 10s;
+  animation-iteration-count: infinite; }
   .flash-card__img {
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
-    width: 100%; }
+    max-width: 100%;
+    max-height: 20rem; }
   .flash-card__header--primary {
     padding: 0.3rem;
     border-radius: 0.3rem;
     background-color: #8a0000;
     position: absolute;
-    top: 10%;
+    top: 4rem;
     animation: moveInLeft 1s; }
   .flash-card__header--secondary {
     padding: 0.3rem;
     border-radius: 0.3rem;
     background-color: #8a0000;
     position: absolute;
-    top: 17%;
+    top: 6.2rem;
     animation: moveInLeft 1.2s; }
   .flash-card__desc {
     margin: -1rem 2rem 2rem 2rem;
@@ -164,7 +186,7 @@ body {
   position: relative; }
   .content__cover {
     width: 100%;
-    height: 17rem;
+    height: 20rem;
     background-image: linear-gradient(to right bottom, rgba(88, 0, 0, 0.6), rgba(194, 59, 34, 0.6)), url(../img/bg.jpg);
     background-size: cover;
     background-blend-mode: screen;
@@ -172,11 +194,11 @@ body {
   .content__profile {
     background-image: url(../img/mypic.jpg);
     background-size: cover;
-    width: 15rem;
-    height: 15rem;
+    width: 17rem;
+    height: 17rem;
     position: absolute;
     top: 10rem;
-    left: 10%;
+    left: 5%;
     border-radius: 10rem;
     border: 1rem solid rgba(0, 0, 0, 0.7); }
     .content__profile:hover {
@@ -190,6 +212,12 @@ body {
     .content__article--description {
       position: absolute;
       top: 15rem; }
+
+.work-card__img {
+  background-image: url("../../img/work-1.jpg"); }
+
+.work-card__title {
+  font-size: 2rem; }
 
 .row {
   max-width: 90%;
@@ -215,7 +243,7 @@ body {
   .row .col-2-of-4 {
     width: calc( 2 * ((100% - 3 *2rem) / 4) + 2rem); }
   .row .col-3-of-4 {
-    width: calc( 3 * ((100% - 3 *2rem) / 4) + 2 *2rem); }
+    width: 100%; }
 
 .section-navbar {
   width: 100%;
@@ -229,4 +257,8 @@ body {
 
 .section-portfolio {
   margin: 1rem;
+  padding: 1%; }
+
+.section-works {
+  margin-top: 20rem;
   padding: 1%; }
