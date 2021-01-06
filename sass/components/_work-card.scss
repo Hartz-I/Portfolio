@@ -1,8 +1,34 @@
 .work-card {
+  position: relative;
   &__img {
-    background-image: url("../../img/work-1.jpg");
+    height: 15rem;
+    width: 20rem;
+    background-size: cover;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.5);
+
+    &--1 {
+      background-image: url("../../img/work-1.png");
+
+      transition: all 3s;
+
+      &:hover {
+        height: 30rem;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(black, 0.2),
+            rgba(white, 0.2),
+            rgba(black, 0.2)
+          ),
+          url("../../img/work-1.png");
+      }
+    }
   }
   &__title {
+    position: absolute;
+    top: 10rem;
+    left: 2rem;
     font-size: 2rem;
+    color: white;
+    text-decoration: underline;
   }
 }

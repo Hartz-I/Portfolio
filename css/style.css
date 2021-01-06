@@ -49,7 +49,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 0.9rem;
   font-weight: bold;
-  line-height: 0.9rem;
+  line-height: 1rem;
   padding: 0.5rem; }
 
 .content-description {
@@ -64,6 +64,9 @@ body {
 
 .u-color-black {
   color: black; }
+
+.u-color-primary {
+  color: #8a0000; }
 
 .navbar {
   position: relative;
@@ -213,11 +216,26 @@ body {
       position: absolute;
       top: 15rem; }
 
-.work-card__img {
-  background-image: url("../../img/work-1.jpg"); }
-
-.work-card__title {
-  font-size: 2rem; }
+.work-card {
+  position: relative; }
+  .work-card__img {
+    height: 15rem;
+    width: 20rem;
+    background-size: cover;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); }
+    .work-card__img--1 {
+      background-image: url("../../img/work-1.png");
+      transition: all 3s; }
+      .work-card__img--1:hover {
+        height: 30rem;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)), url("../../img/work-1.png"); }
+  .work-card__title {
+    position: absolute;
+    top: 10rem;
+    left: 2rem;
+    font-size: 2rem;
+    color: white;
+    text-decoration: underline; }
 
 .row {
   max-width: 90%;
@@ -261,4 +279,4 @@ body {
 
 .section-works {
   margin-top: 20rem;
-  padding: 1%; }
+  padding: 1rem; }
