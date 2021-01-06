@@ -78,6 +78,9 @@ html {
   .content-description:not(:last-child) {
     margin-bottom: 1rem; }
 
+.end-description {
+  color: #eee; }
+
 .u-color-black {
   color: #000; }
 
@@ -86,6 +89,10 @@ html {
 
 .u-margin-bottom-large {
   margin-bottom: 2rem; }
+
+.u-text-align-center {
+  text-align: center;
+  list-style: none; }
 
 .navbar {
   position: relative;
@@ -419,6 +426,22 @@ html {
     font-size: 3.75rem;
     font-weight: 100; }
 
+.end {
+  position: relative; }
+  .end__left-side {
+    position: absolute;
+    left: 1%;
+    top: 1%; }
+  .end__vertical-line {
+    height: 80%;
+    width: 0.1rem;
+    background-color: #f7f7f7;
+    margin: 0 auto; }
+  .end__right-side {
+    position: absolute;
+    left: calc(51% + 1rem);
+    top: 1%; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -473,3 +496,10 @@ html {
   @media (max-width: 800px) {
     .section-works {
       margin-top: 25rem; } }
+
+.section-end {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #777;
+  height: 15rem;
+  border-radius: 0.5rem; }

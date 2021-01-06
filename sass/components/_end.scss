@@ -1,0 +1,23 @@
+.end {
+  position: relative;
+
+  &__left-side {
+    position: absolute;
+    left: 1%;
+    top: 1%;
+  }
+
+  &__vertical-line {
+    height: 80%;
+    width: 0.1rem;
+    background-color: $color-gray-light;
+
+    margin: 0 auto;
+  }
+
+  &__right-side {
+    position: absolute;
+    left: calc(51% + 1rem);
+    top: 1%;
+  }
+}
