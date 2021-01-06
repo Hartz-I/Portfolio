@@ -51,14 +51,17 @@
     width: 100%;
   }
 
-  // @media (max-width: 800px) {
-  //   .col-1-of-3 {
-  //     width: 100%;
-  //   }
+  @media (max-width: 1000px) {
+    [class^="col-"] {
+      width: calc((100% - #{$gutter-horizontal}) / 2);
+      margin-bottom: 10rem;
+    }
+  }
 
-  //   .col-2-of-3 {
-  //     width: 100%;
-  //     margin-top: 2rem;
-  //   }
-  // }
+  @media (max-width: 800px) {
+    [class^="col-"] {
+      width: 100%;
+      margin-bottom: 12rem;
+    }
+  }
 }

@@ -65,6 +65,16 @@
       left: 80%;
     }
 
+    @media (min-width: 200px) {
+      &--primary {
+        left: 30%;
+      }
+
+      &--secondary {
+        left: 40%;
+      }
+    }
+
     @media (min-width: 400px) {
       &--primary {
         left: 60%;

@@ -20,6 +20,24 @@
   padding: 1rem;
 }
 
+.heading-tertiary {
+  background-color: $color-primary;
+  border-radius: 1rem;
+  color: white;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  padding: 1rem;
+
+  transition: all 0.2s;
+
+  &:hover {
+    transform: skew(-7deg) scale(1.1);
+  }
+}
+
 .description {
   color: rgba($color-primary-dark, 0.7);
   font-family: "Raleway", sans-serif;
