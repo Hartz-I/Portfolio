@@ -1,6 +1,10 @@
 .content {
   position: relative;
 
+  @media (max-width: 800px) {
+    margin-top: -7rem;
+  }
+
   &__cover {
     width: 100%;
     height: 20rem;
