@@ -1,7 +1,8 @@
 .btn {
   text-decoration: none;
   color: white;
-  padding: 0.625rem;
+  padding: 1rem;
+  margin: 2rem;
   border-radius: 0.3rem;
   font-size: 1rem;
   display: inline-block;
@@ -41,5 +42,76 @@
     &:hover {
       background-color: lighten(#1da1f2, 10%);
     }
+  }
+}
+
+.btn--natours {
+  &:link,
+  &:visited {
+    /*pseudo class. State of button selector. configures the special type (here the button is a link:for links: site , visit: another click!)*/
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem; /*leftright topbottom : 4 nums for four side*/
+    display: inline-block; /*to seperate it from other lines*/
+    border-radius: 10rem; /*making the border round*/
+    position: relative; /*for after effect*/
+    font-size: $default-font-size;
+
+    /*animation*/
+    transition: all 0.2s; /*must be added to main class. has effect on all changes of it*/
+  }
+
+  &:hover {
+    transform: translateY(-3px); /*popup effect when hovered*/
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.199); /*x y blurr color .black shadow with 20% opacity*/
+
+    &::after {
+      transform: scaleX(1.5) scaleY(1.7);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.199);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-gray-dark;
+
+    &:after {
+      background-color: $color-white;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:after {
+      background-color: $color-primary;
+    }
+  }
+
+  /*more pseudo elements*/
+  &:after {
+    /*directly inherits from button prop*/
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute; /*should be relative to button*/
+    top: 0;
+    left: 0;
+    z-index: -1; /*a white sheet behind the button*/
+
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation: moveInButton 1s ease-out 0.75s;
+    animation-fill-mode: backwards; /*this will auto set the zero percent property prior!*/
   }
 }

@@ -99,8 +99,9 @@ html {
   .navbar__button {
     color: white;
     text-decoration: none;
-    padding: 0.4rem;
-    background-color: #8a0000;
+    padding: 0.3rem;
+    background-color: none;
+    border: 0.1rem solid #8a0000;
     border-radius: 0.2rem;
     font-size: 1.2rem;
     transition: all 0.2s; }
@@ -165,7 +166,8 @@ html {
 .btn {
   text-decoration: none;
   color: white;
-  padding: 0.625rem;
+  padding: 1rem;
+  margin: 2rem;
   border-radius: 0.3rem;
   font-size: 1rem;
   display: inline-block;
@@ -189,6 +191,64 @@ html {
     background-color: #1da1f2; }
     .btn--tw:hover {
       background-color: #4db5f5; }
+
+.btn--natours {
+  /*more pseudo elements*/ }
+  .btn--natours:link, .btn--natours:visited {
+    /*pseudo class. State of button selector. configures the special type (here the button is a link:for links: site , visit: another click!)*/
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    /*leftright topbottom : 4 nums for four side*/
+    display: inline-block;
+    /*to seperate it from other lines*/
+    border-radius: 10rem;
+    /*making the border round*/
+    position: relative;
+    /*for after effect*/
+    font-size: 1.6rem;
+    /*animation*/
+    transition: all 0.2s;
+    /*must be added to main class. has effect on all changes of it*/ }
+  .btn--natours:hover {
+    transform: translateY(-3px);
+    /*popup effect when hovered*/
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.199);
+    /*x y blurr color .black shadow with 20% opacity*/ }
+    .btn--natours:hover::after {
+      transform: scaleX(1.5) scaleY(1.7);
+      opacity: 0; }
+  .btn--natours:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.199); }
+  .btn--natours--white {
+    background-color: #fff;
+    color: #777; }
+    .btn--natours--white:after {
+      background-color: #fff; }
+  .btn--natours--green {
+    background-color: #8a0000;
+    color: #fff; }
+    .btn--natours--green:after {
+      background-color: #8a0000; }
+  .btn--natours:after {
+    /*directly inherits from button prop*/
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    /*should be relative to button*/
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /*a white sheet behind the button*/
+    transition: all 0.4s; }
+  .btn--natours--animated {
+    animation: moveInButton 1s ease-out 0.75s;
+    animation-fill-mode: backwards;
+    /*this will auto set the zero percent property prior!*/ }
 
 .content {
   position: relative; }
@@ -264,7 +324,7 @@ html {
       background-color: green;
       transform: rotateY(180deg); }
       .card__side--back-1 {
-        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
       .card__side--back-2 {
         background-image: linear-gradient(to right bottom, #c23b22, #580000); }
       .card__side--back-3 {
@@ -282,11 +342,11 @@ html {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/work-1.png); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/work-1.png); }
     .card__picture--2 {
       background-image: linear-gradient(to right bottom, #c23b22, #580000), url(../img/work-2.png); }
     .card__picture--3 {
-      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg); }
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/work-3.png); }
   .card__heading {
     font-size: 1.75rem;
     font-weight: 300;
@@ -302,7 +362,7 @@ html {
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone; }
     .card__heading-span--1 {
-      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
     .card__heading-span--2 {
       background-image: linear-gradient(to right bottom, rgba(194, 59, 34, 0.85), rgba(88, 0, 0, 0.85)); }
     .card__heading-span--3 {
