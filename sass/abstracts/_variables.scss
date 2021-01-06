@@ -1,6 +1,6 @@
-$gutter-horizontal: 2rem;
+$gutter-horizontal: 1.25rem;
 $grid-width: 90%;
-$gutter-vertical: 2rem;
+$gutter-vertical: 1.25rem;
 
 $color-primary: #8a0000;
 $color-primary-light: #c23b22;
@@ -9,4 +9,25 @@ $color-primary-dark: #580000;
 $bg-color-flash-desc: #fff;
 $color-flash-desc: #000;
 
-$color-black: black;
+//colors
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tartiary-light: #2998ff;
+$color-tartiary-dark: #5643fa;
+
+$color-gray-light: #f7f7f7;
+$color-gray-light-2: #eee;
+
+$color-white: #fff;
+$color-black: #000;
+$color-gray-dark: #777;
+
+//FONT
+$default-font-size: 1.6rem;
+
+//GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;

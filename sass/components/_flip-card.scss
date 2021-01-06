@@ -1,0 +1,212 @@
+.card {
+  perspective: 93.75rem; //perspective needs to be in the parent element!. so we add card site as child
+  -moz-perspective: 93.75rem; //needs a really high value to work.
+  height: 32.5rem;
+
+  position: relative;
+
+  //FUNCTIONALITY
+  &__side {
+    // color: white; these were for testing
+    // font-size: 2rem;
+    height: 32.5rem;
+
+    transition: all 0.8s ease;
+
+    position: absolute; //applies for both the cards. puts them on top of other
+    top: 0; //but the heigh colapses. so we add height also to the parent
+    left: 0;
+
+    width: 100%; //other wise takes the width of text
+
+    backface-visibility: hidden; //hides the backpart of an element
+
+    border-radius: 3px;
+    overflow: hidden; //to prevent the image from overlaping!
+    box-shadow: 0 0.9375rem 2.5rem rgba($color-black, 0.15); //can also make it a variable
+
+    &--front {
+      background-color: white;
+    }
+
+    &--back {
+      background-color: green;
+      transform: rotateY(180deg); //back already rotated
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tartiary-light,
+          $color-tartiary-dark
+        );
+      }
+    }
+  }
+  &:hover &__side--front {
+    //hovering only effects the side child
+
+    //front rotates
+    //negative for symmetry
+    transform: rotateY(
+      -180deg
+    ); //already rotating. but to look realistic we add perspective
+  }
+
+  &:hover &__side--back {
+    //hovering only effects the side child
+
+    //from 180deg it flips back to zero!
+    transform: rotateY(0deg);
+  }
+
+  //FRONT SIDE STYLING
+  &__picture {
+    background-size: cover; //parent cuz for all images
+    height: 14.375rem; //number by experimenting
+    background-blend-mode: screen; //blending two images. putting like a effect!
+    -webkit-clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 85%,
+      0 100%
+    ); //we did webkit so that it supports all the browsers
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url(../img/work-1.png); //with respect to where the css resides
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(../img/work-2.png); //with respect to where the css resides
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tartiary-light,
+          $color-tartiary-dark
+        ),
+        url(../img/nat-7.jpg); //with respect to where the css resides
+    }
+  }
+
+  &__heading {
+    font-size: 1.75rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+
+    text-align: right;
+
+    position: absolute;
+    top: 7.5rem;
+    right: 1.25rem;
+
+    width: 60%;
+  }
+
+  &__heading-span {
+    //it's a new element so no nesting
+    padding: 0.2rem 0.9375rem;
+
+    -webkit-box-decoration-break: clone; //to make chrome thing two lines as separate line
+    box-decoration-break: clone;
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tartiary-light, 0.85),
+        rgba($color-tartiary-dark, 0.85)
+      );
+    }
+  }
+
+  &__details {
+    padding: 1.875rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; //simplest way to center a block element inside another block element
+
+      li {
+        text-align: center;
+        font-size: 0.9375rem;
+        padding: 0.625rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-gray-light-2;
+        }
+      }
+    }
+  }
+
+  //Back side styling
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); //centering with absolute positioning
+
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 5rem;
+  }
+
+  &__price-only {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 3.75rem; //big price
+    font-weight: 100;
+  }
+}
