@@ -35,4 +35,8 @@
   background-color: $color-gray-dark;
   height: 15rem;
   border-radius: 0.5rem;
+
+  @media (max-width: 800px) {
+    height: 30rem;
+  }
 }

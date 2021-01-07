@@ -426,21 +426,8 @@ html {
     font-size: 3.75rem;
     font-weight: 100; }
 
-.end {
-  position: relative; }
-  .end__left-side {
-    position: absolute;
-    left: 1%;
-    top: 1%; }
-  .end__vertical-line {
-    height: 80%;
-    width: 0.1rem;
-    background-color: #f7f7f7;
-    margin: 0 auto; }
-  .end__right-side {
-    position: absolute;
-    left: calc(51% + 1rem);
-    top: 1%; }
+.end__left-side ul {
+  list-style: none; }
 
 .row {
   max-width: 114rem;
@@ -503,3 +490,6 @@ html {
   background-color: #777;
   height: 15rem;
   border-radius: 0.5rem; }
+  @media (max-width: 800px) {
+    .section-end {
+      height: 30rem; } }
