@@ -58,7 +58,7 @@ html {
   padding: 1rem;
   transition: all 0.2s; }
   .heading-tertiary:hover {
-    transform: skew(-7deg) scale(1.1); }
+    transform: skew(-7deg) scale(1.05); }
 
 .description {
   color: rgba(88, 0, 0, 0.7);
@@ -141,9 +141,9 @@ html {
       left: 80%; }
     @media (min-width: 200px) {
       .navbar__button--primary {
-        left: 30%; }
+        left: 51%; }
       .navbar__button--secondary {
-        left: 40%; } }
+        left: 75%; } }
     @media (min-width: 400px) {
       .navbar__button--primary {
         left: 60%; }
@@ -492,10 +492,10 @@ html {
 
 .section-works {
   margin-top: 20rem;
-  padding: 5rem; }
+  padding: 1rem; }
   @media (max-width: 800px) {
     .section-works {
-      margin-top: 25rem; } }
+      margin-top: 30rem; } }
 
 .section-end {
   margin: 1rem;
