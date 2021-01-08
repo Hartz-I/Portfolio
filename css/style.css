@@ -429,6 +429,9 @@ html {
 .end__left-side ul {
   list-style: none; }
 
+.end__contact--details {
+  list-style: none; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
