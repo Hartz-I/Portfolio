@@ -23,8 +23,8 @@
   &__profile {
     background-image: url(../img/mypic.jpg);
     background-size: cover;
-    width: 17rem;
-    height: 17rem;
+    width: 15rem;
+    height: 15rem;
     position: absolute;
     top: 10rem;
     left: 5%;
@@ -46,12 +46,19 @@
     position: relative;
 
     animation: moveInRight 2s ease;
+    box-shadow: 0 0.1rem 1rem rgba($color-primary, 0.5);
     &--title {
+      font-family: 'Courier New', Courier, monospace;
+      background: rgba(253, 180, 180, 0.986);
+      border-radius: 1rem;
       position: absolute;
       top: 10rem;
     }
 
     &--description {
+      font-family: 'Courier New', Courier, monospace;
+      background: rgba(253, 180, 180, 0.986);
+      border-radius: 1rem;
       position: absolute;
       top: 15rem;
     }
