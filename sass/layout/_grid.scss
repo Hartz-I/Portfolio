@@ -103,7 +103,6 @@
   }
 
   .col-1-of-4 {
-    align-self: center;
     width: calc((100% - 3 *#{$gutter-horizontal}) / 4);
   }
 
