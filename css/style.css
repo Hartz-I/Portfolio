@@ -197,7 +197,7 @@ html {
   margin: 2rem;
   border-radius: 0.3rem;
   font-size: 1rem;
-  display: inline-block;
+  display: inline;
   transition: all 0.2s; }
   .btn:hover {
     transform: translateY(-2px); }
