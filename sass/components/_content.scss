@@ -48,7 +48,7 @@
     animation: moveInRight 2s ease;
     box-shadow: 0 0.1rem 1rem rgba($color-primary, 0.5);
     &--title {
-      font-family: 'Courier New', Courier, monospace;
+      font-family: 'Lucida Handwriting', cursive;
       background: rgba(253, 180, 180, 0.986);
       border-radius: 1rem;
       position: absolute;
@@ -57,10 +57,10 @@
 
     &--description {
       font-family: 'Courier New', Courier, monospace;
-      background: rgba(253, 180, 180, 0.986);
+      background: rgba(250, 212, 212, 0.986);
       border-radius: 1rem;
       position: absolute;
-      top: 15rem;
+      top: 17rem;
     }
   }
 }

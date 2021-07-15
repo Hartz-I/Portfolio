@@ -116,6 +116,33 @@
         ),
         url(../img/work-3.png); //with respect to where the css resides
     }
+
+    &--4 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url(../img/work-4.png); //with respect to where the css resides
+    }
+
+    &--5 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(../img/work-5.png); //with respect to where the css resides
+    }
+
+    &--6 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tartiary-light,
+          $color-tartiary-dark
+        ),
+        url(../img/work-6.png); //with respect to where the css resides
+    }
   }
 
   &__heading {

@@ -21,7 +21,7 @@
 }
 
 .heading-tertiary {
-  background-color: $color-primary;
+  background-color: $color-secondary-dark;
   border-radius: 1rem;
   color: white;
   font-family: "Helvetica Neue", sans-serif;
@@ -32,6 +32,10 @@
   padding: 1rem;
 
   transition: all 0.2s;
+
+  &--gamedev {
+    background-color: $color-primary;
+  }
 
   &:hover {
     transform: skew(-5deg) scale(1.02);
