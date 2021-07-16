@@ -191,35 +191,42 @@ html {
     border-radius: 0.5rem;
     color: rgba(0, 0, 0, 0.8);
     background-color: #fff; }
-
-.btn {
-  text-decoration: none;
-  color: white;
-  padding: 1rem;
-  margin: 2rem;
-  border-radius: 0.3rem;
-  font-size: 1rem;
-  display: inline-block;
-  transition: all 0.2s; }
-  .btn:hover {
-    transform: translateY(-2px); }
-  .btn:active {
-    transform: translateY(-1px); }
-  .btn--fb {
-    animation: moveInLeft 1.6s;
-    background-color: #4267b2; }
-    .btn--fb:hover {
-      background-color: #6283c5; }
-  .btn--gh {
-    animation: moveInLeft 1.8s;
-    background-color: #1d2129; }
-    .btn--gh:hover {
-      background-color: #323947; }
-  .btn--tw {
-    animation: moveInLeft 2s;
-    background-color: #1da1f2; }
-    .btn--tw:hover {
-      background-color: #4db5f5; }
+  .flash-card--btn {
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 0.3rem;
+    font-size: 0.85rem;
+    display: inline-block;
+    bottom: 1%;
+    height: 1rem;
+    width: 3rem;
+    text-align: center;
+    transition: all 0.2s; }
+    .flash-card--btn:hover {
+      transform: translateY(-2px); }
+    .flash-card--btn:active {
+      transform: translateY(-1px); }
+    .flash-card--btn--fb {
+      left: -3%;
+      animation: moveInLeft 1.6s;
+      background-color: #4267b2; }
+      .flash-card--btn--fb:hover {
+        background-color: #6283c5; }
+    .flash-card--btn--gh {
+      left: 26%;
+      animation: moveInLeft 1.8s;
+      background-color: #1d2129; }
+      .flash-card--btn--gh:hover {
+        background-color: #323947; }
+    .flash-card--btn--tw {
+      left: 57%;
+      animation: moveInLeft 2s;
+      background-color: #1da1f2; }
+      .flash-card--btn--tw:hover {
+        background-color: #4db5f5; }
 
 .btn--natours {
   /*more pseudo elements*/ }
