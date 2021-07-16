@@ -26,6 +26,24 @@ html {
   100% {
     transform: scale(1) translateY(0); } }
 
+@keyframes shake {
+  0% {
+    transform: rotate(0); }
+  40% {
+    transform: rotate(2deg); }
+  45% {
+    transform: rotate(-2deg); }
+  50% {
+    transform: rotate(2deg); }
+  55% {
+    transform: rotate(-2deg); }
+  60% {
+    transform: rotate(2deg); }
+  65% {
+    transform: rotate(-2deg); }
+  100% {
+    transform: rotateX(0); } }
+
 .heading-primary {
   color: rgba(88, 0, 0, 0.7);
   font-family: "Helvetica Neue", sans-serif;
@@ -299,17 +317,18 @@ html {
     background-image: linear-gradient(to right bottom, rgba(88, 0, 0, 0.6), rgba(194, 59, 34, 0.6)), url(../img/bg.jpg);
     background-size: cover;
     background-blend-mode: screen;
-    animation: moveInRight 1s ease; }
+    animation: moveInRight 1s ease;
+    animation: subtleMove 5s infinite; }
   .content__profile {
     background-image: url(../img/mypic.jpg);
     background-size: cover;
-    width: 15rem;
-    height: 15rem;
+    width: 20rem;
+    height: 20rem;
     position: absolute;
     top: 10rem;
-    left: 5%;
-    border-radius: 10rem;
-    border: 1rem solid rgba(0, 0, 0, 0.7); }
+    right: 5%;
+    border-radius: 2rem;
+    border: 0.5rem solid rgba(0, 0, 0, 0.7); }
     .content__profile:hover {
       background-image: linear-gradient(to right bottom, rgba(88, 0, 0, 0.4), rgba(194, 59, 34, 0.4)), url(../img/mypic.jpg); }
   .content__article {
@@ -317,13 +336,15 @@ html {
     animation: moveInRight 2s ease;
     box-shadow: 0 0.1rem 1rem rgba(138, 0, 0, 0.5); }
     .content__article--title {
-      font-family: 'Lucida Handwriting', cursive;
+      animation: shake 2s infinite ease;
+      font-family: "Lucida Handwriting", cursive;
       background: rgba(253, 180, 180, 0.986);
       border-radius: 1rem;
       position: absolute;
-      top: 10rem; }
+      top: 10rem;
+      font-size: 2rem; }
     .content__article--description {
-      font-family: 'Courier New', Courier, monospace;
+      font-family: "Courier New", Courier, monospace;
       background: rgba(250, 212, 212, 0.986);
       border-radius: 1rem;
       position: absolute;
